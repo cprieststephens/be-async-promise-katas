@@ -45,7 +45,14 @@ const cat = () => {
 // 3 Create a function that uses the fetch function to make a request to the "dogs" URL and returns
 // the naughtiest dog - expected return value {name: "Mutley", naughty: 10} of type Object
 
-const dog = () => {};
+const dog = () => {
+  return fetch("dogs")
+  .then((response) => {
+    return  response.data.dogs.find(dog => {
+      return dog.naughty === 10;
+    });
+  });
+};
 
 // 4 Create a function that uses the fetch function to make requests to the "jokes" URL and returns
 // a joke object with the key of question and answer - expected return {
