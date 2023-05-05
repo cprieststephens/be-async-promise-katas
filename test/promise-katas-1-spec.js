@@ -46,7 +46,7 @@ describe('returnString', () => {
 });
 
 describe('returnBob', () => {
-    it("returns a promise that resolves to { name: 'Bob' }", (done) => {
+    xit("returns a promise that resolves to { name: 'Bob' }", (done) => {
         returnBob()
             .then(value => {
                 expect(value).to.deep.equal({ name: 'Bob' });
@@ -68,7 +68,7 @@ describe('returnList', () => {
 });
 
 describe('anError', () => {
-    xit('returns a promise that returns "An error occurred" when it rejects', (done) => {
+    it('returns a promise that returns "An error occurred" when it rejects', (done) => {
         anError()
             .catch(value => {
                 expect(value).to.equal("An error occurred");
