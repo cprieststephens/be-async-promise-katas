@@ -93,7 +93,11 @@ const anError = () => {
 // Example:
 // theNumberOfTheBeast() rejects to the value 666
 
-const theNumberOfTheBeast = () => { };
+const theNumberOfTheBeast = () => { 
+  return new Promise((resolve, reject) => {
+    reject(666);
+  });
+};
 
 // 8 Create a function that returns a promise which returns an object with a key of error and value of 500 if it rejects
 // Example:

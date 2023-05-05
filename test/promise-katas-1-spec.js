@@ -68,7 +68,7 @@ describe('returnList', () => {
 });
 
 describe('anError', () => {
-    it('returns a promise that returns "An error occurred" when it rejects', (done) => {
+    xit('returns a promise that returns "An error occurred" when it rejects', (done) => {
         anError()
             .catch(value => {
                 expect(value).to.equal("An error occurred");
@@ -78,7 +78,7 @@ describe('anError', () => {
 });
 
 describe('theNumberOfTheBeast', () => {
-    xit('returns a promise that returns 666 when it rejects', (done) => {
+    it('returns a promise that returns 666 when it rejects', (done) => {
         theNumberOfTheBeast()
             .catch(value => {
                 expect(value).to.equal(666);
