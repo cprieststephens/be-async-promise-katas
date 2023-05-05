@@ -43,7 +43,11 @@ const returnPromise = () => {
 // Example:
 // returnTen() resolves to the value 10
 
-const returnTen = () => { };
+const returnTen = () => {
+  return new Promise((resolve, reject) => {
+    resolve(10);
+  });
+ };
 
 // 3 Create a function that returns a promise which returns 'string' if it resolves succesfully
 // Example:

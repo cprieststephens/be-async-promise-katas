@@ -16,7 +16,7 @@ const {
 const { expect } = require("chai");
 
 describe('returnPromise', () => {
-    it('returns a promise', (done) => {
+    xit('returns a promise', (done) => {
         returnPromise()
             .then(() => done())
             .catch(() => done(new Error('The promise is expected to resolve')));
@@ -24,7 +24,7 @@ describe('returnPromise', () => {
 });
 
 describe('returnTen', () => {
-    xit('returns a promise that resolves to 10', (done) => {
+    it('returns a promise that resolves to 10', (done) => {
         returnTen()
             .then(value => {
                 expect(value).to.equal(10);
