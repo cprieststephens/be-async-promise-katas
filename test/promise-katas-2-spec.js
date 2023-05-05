@@ -17,13 +17,13 @@ describe('food', () => {
 });
 
 describe('cat', () => {
-    xit('returns the correct ordered list of cats', async () => {
+    it('returns the correct ordered list of cats', async () => {
         expect(await cat()).to.deep.equal(["Bandit", "Berry", "Puss in boots", "Smokey"]);
     })
 });
 
 describe('dog', () => {
-    xit('returns the naughiest dog', async () => {
+    it('returns the naughiest dog', async () => {
         expect(await dog()).to.deep.equal({name: "Mutley", naughty: 10});
     })
 });
