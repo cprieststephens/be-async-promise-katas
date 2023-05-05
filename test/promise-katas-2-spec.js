@@ -11,7 +11,7 @@ const {
 const { expect } = require("chai");
 
 describe('food', () => {
-    xit('returns the correct food', async () => {
+    it('returns the correct food', async () => {
         expect(await food()).to.equal("Cheese");
     })
 });

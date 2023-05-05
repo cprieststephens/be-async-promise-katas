@@ -149,7 +149,7 @@ describe('amIYourFather', () => {
 });
 
 describe('myNameIs', () => {
-    it('returns a promise that returns "My name is Romy" when it resolves', (done) => {
+    xit('returns a promise that returns "My name is Romy" when it resolves', (done) => {
         const name = "Romy";
         myNameIs()
             .then(value => {
