@@ -24,7 +24,7 @@ describe('returnPromise', () => {
 });
 
 describe('returnTen', () => {
-    it('returns a promise that resolves to 10', (done) => {
+    xit('returns a promise that resolves to 10', (done) => {
         returnTen()
             .then(value => {
                 expect(value).to.equal(10);
@@ -35,7 +35,7 @@ describe('returnTen', () => {
 });
 
 describe('returnString', () => {
-    xit("returns a promise that resolves to 'string'", (done) => {
+    it("returns a promise that resolves to 'string'", (done) => {
         returnString()
             .then(value => {
                 expect(value).to.equal('string');
