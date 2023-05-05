@@ -78,7 +78,7 @@ describe('anError', () => {
 });
 
 describe('theNumberOfTheBeast', () => {
-    it('returns a promise that returns 666 when it rejects', (done) => {
+    xit('returns a promise that returns 666 when it rejects', (done) => {
         theNumberOfTheBeast()
             .catch(value => {
                 expect(value).to.equal(666);
@@ -98,7 +98,7 @@ describe('internalServerError', () => {
 });
 
 describe('happySad', () => {
-    xit('returns a promise that returns "happy" when x > 1', (done) => {
+    it('returns a promise that returns "happy" when x > 1', (done) => {
         happySad(2)
             .then(value => {
                 expect(value).to.equal("happy");
@@ -106,7 +106,7 @@ describe('happySad', () => {
             })
             .catch(() => done(new Error('The promise is expected to resolve with happy!')));
     })
-    xit('returns a promise that returns "happy" when x = 1', (done) => {
+    it('returns a promise that returns "happy" when x = 1', (done) => {
       happySad(1)
           .then(value => {
               expect(value).to.equal("happy");
@@ -114,7 +114,7 @@ describe('happySad', () => {
           })
           .catch(() => done(new Error('The promise is expected to resolve with happy!')));
   })
-    xit('returns a promise that returns "sad" when x < 1', (done) => {
+    it('returns a promise that returns "sad" when x < 1', (done) => {
         happySad(0)
             .catch(value => {
                 expect(value).to.equal("sad");

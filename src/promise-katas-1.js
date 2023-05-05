@@ -103,7 +103,11 @@ const theNumberOfTheBeast = () => {
 // Example:
 // internalServerError() rejects to { error: 500 }
 
-const internalServerError = () => { };
+const internalServerError = () => { 
+  return new Promise((resolve, reject) => {
+    reject( {error: 500 });
+  });
+};
 
 // 9 Create a function that returns a promise which resolves to "happy" if the parameter is greater than
 // or equal to 1 and rejects to "sad" if the value is less than 1
@@ -111,7 +115,12 @@ const internalServerError = () => { };
 // happySad(1) resolves to "happy"
 // happySad(0) rejects to "sad"
 
-const happySad = () => { };
+const happySad = (x) => { 
+  return new Promise((resolve, reject) => {
+    if (x >= 1) resolve("happy");
+    else reject("sad");
+  });
+};
 
 // 10 Create a function that returns a promise which resolves to "Yes. Luke, I am your father." if the
 // parameter is "Luke" and rejects to "Not your dad." if the value is anything else
