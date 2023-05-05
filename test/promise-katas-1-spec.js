@@ -124,7 +124,7 @@ describe('happySad', () => {
 });
 
 describe('amIYourFather', () => {
-    it('returns a promise that returns "Yes. Luke, I am your father." when the passed parameter === "Luke"', (done) => {
+    xit('returns a promise that returns "Yes. Luke, I am your father." when the passed parameter === "Luke"', (done) => {
         amIYourFather("Luke")
             .then(value => {
                 expect(value).to.equal("Yes. Luke, I am your father.");
@@ -132,14 +132,14 @@ describe('amIYourFather', () => {
             })
             .catch(() => done(new Error('The promise is expected to resolve with "Yes. Luke, I am your father."!')));
     })
-    it('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
+    xit('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
         amIYourFather("something else")
             .catch(value => {
                 expect(value).to.equal("Not your dad.");
                 done();
             });
     })
-    it('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
+    xit('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
         amIYourFather(0)
             .catch(value => {
                 expect(value).to.equal("Not your dad.");
@@ -149,7 +149,7 @@ describe('amIYourFather', () => {
 });
 
 describe('myNameIs', () => {
-    xit('returns a promise that returns "My name is Romy" when it resolves', (done) => {
+    it('returns a promise that returns "My name is Romy" when it resolves', (done) => {
         const name = "Romy";
         myNameIs()
             .then(value => {
