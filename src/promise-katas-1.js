@@ -128,13 +128,18 @@ const happySad = (x) => {
 // amIYourFather() resolves to "Yes. Luke, I am your father."
 // amIYourFather() rejects to "Not your dad."
 
-const amIYourFather = () => { };
+const amIYourFather = (x) => {
+  return new Promise((resolve, reject) => {
+    if (x === "Luke") resolve("Yes. Luke, I am your father.");
+    else reject("Not your dad.");
+  });
+ };
 
 // 11 Create a function that returns a promise. The promise should resolve to a new function that returns "My name is <input name>"
 // Example:
 // A call to myNameIs() resolves to a new function that takes one argument, name, and returns "My name is name" Eg (name) => `My name is ${name}`
 
-const myNameIs = () => { };
+const myNameIs = () => { }
 
 
 module.exports = {

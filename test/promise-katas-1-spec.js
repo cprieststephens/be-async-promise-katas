@@ -98,7 +98,7 @@ describe('internalServerError', () => {
 });
 
 describe('happySad', () => {
-    it('returns a promise that returns "happy" when x > 1', (done) => {
+    xit('returns a promise that returns "happy" when x > 1', (done) => {
         happySad(2)
             .then(value => {
                 expect(value).to.equal("happy");
@@ -106,7 +106,7 @@ describe('happySad', () => {
             })
             .catch(() => done(new Error('The promise is expected to resolve with happy!')));
     })
-    it('returns a promise that returns "happy" when x = 1', (done) => {
+    xit('returns a promise that returns "happy" when x = 1', (done) => {
       happySad(1)
           .then(value => {
               expect(value).to.equal("happy");
@@ -114,7 +114,7 @@ describe('happySad', () => {
           })
           .catch(() => done(new Error('The promise is expected to resolve with happy!')));
   })
-    it('returns a promise that returns "sad" when x < 1', (done) => {
+    xit('returns a promise that returns "sad" when x < 1', (done) => {
         happySad(0)
             .catch(value => {
                 expect(value).to.equal("sad");
@@ -124,7 +124,7 @@ describe('happySad', () => {
 });
 
 describe('amIYourFather', () => {
-    xit('returns a promise that returns "Yes. Luke, I am your father." when the passed parameter === "Luke"', (done) => {
+    it('returns a promise that returns "Yes. Luke, I am your father." when the passed parameter === "Luke"', (done) => {
         amIYourFather("Luke")
             .then(value => {
                 expect(value).to.equal("Yes. Luke, I am your father.");
@@ -132,14 +132,14 @@ describe('amIYourFather', () => {
             })
             .catch(() => done(new Error('The promise is expected to resolve with "Yes. Luke, I am your father."!')));
     })
-    xit('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
+    it('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
         amIYourFather("something else")
             .catch(value => {
                 expect(value).to.equal("Not your dad.");
                 done();
             });
     })
-    xit('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
+    it('returns a promise that returns "Not your dad." when the passed parameter !== "Luke"', (done) => {
         amIYourFather(0)
             .catch(value => {
                 expect(value).to.equal("Not your dad.");
