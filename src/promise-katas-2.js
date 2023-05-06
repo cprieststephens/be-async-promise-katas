@@ -64,7 +64,47 @@ const dog = () => {
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
 //
 
-const joke = () => {};
+const joke = () => {
+  return fetch("jokes", "question")
+  .then((response) => {
+    return response;
+  }); 
+}; // Returns { joke: "Why did the scarecrow win the Nobel Prize?" }
+
+const joke = () => {
+  return fetch("jokes")
+  .then((response) => {
+    return response;
+  });
+}; // Returns { answer: "Because he was out-standing in his field." }
+
+////////////////////////////////////////////////////////////////////////
+
+const joke = () => {
+  const jokeQuestion = fetch("jokes", "question").then((response) => {
+    return response;
+  });
+  const jokeAnswer = fetch("jokes").then((response) => {
+    return response;
+  });
+
+  Promise.all([jokeQuestion, jokeAnswer])
+  .then((values) => {
+    return values;
+  });
+}; // Returns undefined
+
+////////////////////////////////////////////////////////////////////////
+
+const joke = () => {
+	const jokeQuestion = fetch("jokes", "question");
+	const jokeAnswer = fetch("jokes");
+
+  Promise.all([jokeQuestion, jokeAnswer])
+  .then((response) => {
+    return response;
+  });
+}; // Returns undefined
 
 module.exports = {
   food,
