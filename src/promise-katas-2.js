@@ -26,7 +26,6 @@ const dog = () => {
 const joke = () => {
   return Promise.all([fetch("jokes", "question"), fetch("jokes")])
   .then((response) => {
-
     const [jokeQuestion, jokeAnswer] = response;
     const question = jokeQuestion.joke;
     const answer = jokeAnswer.answer;
@@ -35,7 +34,6 @@ const joke = () => {
       question,
       answer
     };
-
   });
 }; 
 
