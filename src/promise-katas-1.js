@@ -46,16 +46,16 @@ const internalServerError = () => {
   });
 };
 
-const happySad = (x) => { 
+const happySad = (number) => { 
   return new Promise((resolve, reject) => {
-    if (x >= 1) resolve("happy");
+    if (number >= 1) resolve("happy");
     else reject("sad");
   });
 };
 
-const amIYourFather = (x) => {
+const amIYourFather = (name) => {
   return new Promise((resolve, reject) => {
-    if (x === "Luke") resolve("Yes. Luke, I am your father.");
+    if (name === "Luke") resolve("Yes. Luke, I am your father.");
     else reject("Not your dad.");
   });
  };
@@ -67,7 +67,6 @@ const myNameIs = () => {
     });
   });
 };
-
 
 module.exports = {
   returnPromise,

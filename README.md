@@ -7,7 +7,7 @@ The starter files and end-to-end tests were cloned from: https://github.com/Comm
 ## Getting started
 
 - Create a fork of this repo.
-- Clone your copy of the repo using the command: git clone git@github.com:_your-github-username_/javascript-basics-express
+- Copy the fork's git address and clone to you machine using `git clone`.
 
 ## Install the dependencies
 
